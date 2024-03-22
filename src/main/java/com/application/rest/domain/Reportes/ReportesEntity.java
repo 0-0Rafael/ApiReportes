@@ -1,11 +1,15 @@
 package com.application.rest.domain.Reportes;
 
-import com.application.rest.domain.Nodos.Fase;
+import com.application.rest.domain.InfoRepo.InfoRepoEntity;
+import com.application.rest.domain.Nodos.NodoEntity;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "reportes")
@@ -13,6 +17,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @EqualsAndHashCode(of = "reporte_id")
 public class ReportesEntity {
 
@@ -22,7 +27,7 @@ public class ReportesEntity {
     private Date fecha;
 
     @Enumerated(EnumType.STRING)
-    private Categoria_Actividad categoria_actividad;
+    private CategoriaAct categoriaact;
 
     private String motivo_visita;
     private String actividad_realizadas;
@@ -33,6 +38,14 @@ public class ReportesEntity {
 
     private String personal_encargado;
 
+    //private Nodo_Entity nodoEntity;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "nodo_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private NodoEntity nodoEntity;
+
+    @OneToMany(mappedBy = "reportesEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<InfoRepoEntity> inforepo = new ArrayList<>();
 
 
 }

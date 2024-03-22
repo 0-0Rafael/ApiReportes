@@ -1,6 +1,6 @@
 package com.application.rest.domain.Nodos;
 
-public enum Zona_Nodo {
+public enum Zona {
 
     DISTRITO_NACIONAL,
     SUR,
