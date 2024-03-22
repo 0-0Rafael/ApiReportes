@@ -1,6 +1,6 @@
 package com.application.rest.domain.Reportes;
 
-public enum Categoria_Actividad {
+public enum CategoriaAct {
 
     LEVANTAMIENTO,
     SUPERVISION,
