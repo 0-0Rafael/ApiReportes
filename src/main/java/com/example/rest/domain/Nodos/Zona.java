@@ -3,9 +3,11 @@ package com.example.rest.domain.Nodos;
 public enum Zona {
 
     DISTRITO_NACIONAL,
-    SUR,
+    ESTE,
     NORTE,
-    SANTO_DOMINGO
+    SUR,
+    SANTO_DOMINGO,
+
 
 
 
