@@ -1,0 +1,1 @@
+ALTER TABLE reportes ADD FOREIGN KEY (nodo_id) REFERENCES nodos (nodo_id)

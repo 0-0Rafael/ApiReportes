@@ -1,0 +1,1 @@
+ALTER TABLE inforepo ADD FOREIGN KEY (reporte_id) REFERENCES reportes (reporte_id)
