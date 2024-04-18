@@ -11,7 +11,7 @@
 	<groupId>com.example.rest</groupId>
 	<artifactId>Reporteapi17of</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<!--<packaging>war</packaging>-->
 	<name>Reporteapi17of</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
