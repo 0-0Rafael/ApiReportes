@@ -1,6 +1,7 @@
 package com.example.rest.controller;
 
 import com.example.rest.domain.InfoRepo.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/inforepo")
+@SecurityRequirement(name = "bearer-key")
 public class InfoReporteController {
 
     @Autowired

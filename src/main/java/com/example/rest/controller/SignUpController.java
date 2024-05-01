@@ -17,7 +17,6 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/signup")
-@CrossOrigin("*")
 public class SignUpController {
 
     @Autowired
